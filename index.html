@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mentorship Program Application Form</title>
+  </head>
+  <body>
+    <header>
+      <h1>Mentorship Program Application</h1>
+      <p>Complete the form below to apply for the upcoming learning cohort.</p>
+    </header>
+
+    <main>
+      <form action="/submit-application" method="post">
+        <!-- Personal Information Fieldset -->
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <p>
+            <label for="fullname">Full Name:</label>
+            <input
+              type="text"
+              id="fullname"
+              name="full_name"
+              required
+              minlength="2"
+              maxlength="60"
+              placeholder="Ada Lovelace"
+            />
+          </p>
+
+          <p>
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="ada@example.com"
+            />
+          </p>
+
+          <p>
+            <label for="phone">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="123-456-7890"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            />
+          </p>
+
+          <p>
+            <label for="dob">Date of Birth:</label>
+            <input
+              type="date"
+              id="dob"
+              name="date_of_birth"
+              required
+              max="2008-12-31"
+            />
+          </p>
+
+          <fieldset>
+            <legend>Gender Identification</legend>
+            <p>
+              <input
+                type="radio"
+                id="gender-female"
+                name="gender"
+                value="female"
+              />
+              <label for="gender-female">Female</label>
+            </p>
+            <p>
+              <input type="radio" id="gender-male" name="gender" value="male" />
+              <label for="gender-male">Male</label>
+            </p>
+            <p>
+              <input
+                type="radio"
+                id="gender-other"
+                name="gender"
+                value="other"
+              />
+              <label for="gender-other">Prefer not to say / Other</label>
+            </p>
+          </fieldset>
+        </fieldset>
+
+        <!-- Development Information Fieldset -->
+        <fieldset>
+          <legend>Development &amp; Background Information</legend>
+
+          <p>
+            <label for="experience">Current Experience Level:</label>
+            <select id="experience" name="experience_level" required>
+              <option value="" disabled selected>Select your level</option>
+              <option value="beginner">Absolute Beginner</option>
+              <option value="novice">Some HTML/CSS Knowledge</option>
+              <option value="intermediate">
+                Comfortable with Git &amp; Basics
+              </option>
+            </select>
+          </p>
+
+          <p>
+            <label for="track">Preferred Learning Track:</label>
+            <select id="track" name="learning_track" required>
+              <option value="" disabled selected>Select a track</option>
+              <option value="frontend">Frontend Web Development</option>
+              <option value="backend">Backend &amp; Databases</option>
+              <option value="fullstack">Full-Stack Engineering</option>
+            </select>
+          </p>
+
+          <fieldset>
+            <legend>Areas of Interest (Check all that apply)</legend>
+            <p>
+              <input
+                type="checkbox"
+                id="interest-html"
+                name="interests"
+                value="html_css"
+              />
+              <label for="interest-html">Semantic HTML &amp; CSS</label>
+            </p>
+            <p>
+              <input
+                type="checkbox"
+                id="interest-js"
+                name="interests"
+                value="javascript"
+              />
+              <label for="interest-js">JavaScript Fundamentals</label>
+            </p>
+            <p>
+              <input
+                type="checkbox"
+                id="interest-git"
+                name="interests"
+                value="git_github"
+              />
+              <label for="interest-git">Git &amp; GitHub Workflows</label>
+            </p>
+            <p>
+              <input
+                type="checkbox"
+                id="interest-db"
+                name="interests"
+                value="databases"
+              />
+              <label for="interest-db">Databases &amp; SQL</label>
+            </p>
+          </fieldset>
+
+          <p>
+            <label for="github">GitHub Profile URL:</label>
+            <input
+              type="url"
+              id="github"
+              name="github_url"
+              required
+              placeholder="https://github.com/username"
+            />
+          </p>
+
+          <p>
+            <label for="statement"
+              >Why do you want to join this mentorship?</label
+            ><br />
+            <textarea
+              id="statement"
+              name="statement"
+              rows="5"
+              cols="40"
+              required
+              minlength="20"
+              maxlength="400"
+              placeholder="Write a short statement (20-400 characters)..."
+            ></textarea>
+          </p>
+        </fieldset>
+
+        <!-- Availability & Agreement Fieldset -->
+        <fieldset>
+          <legend>Availability &amp; Agreement</legend>
+
+          <fieldset>
+            <legend>Weekly Availability</legend>
+            <p>
+              <input
+                type="checkbox"
+                id="avail-weekdays"
+                name="availability"
+                value="weekdays"
+              />
+              <label for="avail-weekdays">Weekdays</label>
+            </p>
+            <p>
+              <input
+                type="checkbox"
+                id="avail-weekends"
+                name="availability"
+                value="weekends"
+              />
+              <label for="avail-weekends">Weekends</label>
+            </p>
+          </fieldset>
+
+          <p>
+            <input type="checkbox" id="rules" name="agree_rules" required />
+            <label for="rules"
+              >I agree to abide by the mentorship community guidelines and
+              commit to weekly check-ins.</label
+            >
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Submit Application</button>
+        </p>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Mentorship Program. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
